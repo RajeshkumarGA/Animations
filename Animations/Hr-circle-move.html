@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.mouse{
+    width: 40px;
+    height:50px;
+    position: relative;
+    margin-left: 50%;
+    border-radius: 40%;
+    animation-name: mousemove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes mousemove{
+    0%   { top:0px;}
+    25%  {top:30px ;}
+    50%  {top:20px;}
+    75%  {top:30px;}
+    100% {top:0px;}
+}
+
+
+.bouncing-ball{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    background-color: blue;
+    margin-left: 5%;
+}
+.bouncing-ball1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    background-color: red;
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 15%;
+}
+.bouncing-ball:hover{
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+.bouncing-ball2{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    background-color: green;
+    animation-name: bounce1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 50%;
+}
+@keyframes bounce{
+    0%  {top:0px;left:0;}
+    15%  {left:200px;}
+    30%  {left: 30px;}
+    45%   {left:200px;}
+    60%   {left:50px;}
+    80%  {left:100px;}
+    90%  {left:70px;}
+    100%  {left:100px;}
+}
+@keyframes bounce1{
+    0%   {top:0px;left:0;}
+    10%  {left:100px;top:-180px;}
+    20%  {left: 180px;top:0px;}
+    30%  {left: 220px;top:-100px;}
+    40%  {left: 250px;top:0px;}
+    50%  {left: 280px;top:-40px;}
+    60%  {left: 300px;top:0px;}
+    70%  {left: 320px;top:-20px;}
+    80%  {left: 330px;top:0px;}
+    90%  {left: 340px;top:-10px;}
+    100% {left: 390px;top:0px;}
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:00px; top:0px; width: 150px;height: 150px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    50%  {background-color:yellow; left:800px;top:0px ;width: 250px;height: 250px; transform: rotate(0.5turn);}
+   	100%{background-color:red; left:0px; top:0px;}
+
+    
+</style>
+</head>
+<body>
+
+<p><b>Note:</b>Animations collection</p>
+<div class="container">
+
+    <div style="width: 100%;height:350px;background:#E3CEAE;">
+        <h3>Animation 1</h3>
+        <div class="box"></div>
+    </div>
+
+    <div style="width:100%;height: 150px;background: #C9EAF6;">
+    <h3>Animation 2</h3>
+        <img src="Mouse.png" class="mouse">
+    </div>
+
+    <div style="background:#E5C4DD;margin-top:5%;height: 215px;">
+         <h3>Animation 3</h3>
+         <p>move mouse over ball to see animation</p>
+         <div class="bouncing-ball"></div>
+         <div class="bouncing-ball1"></div>
+         <div class="bouncing-ball2"></div>
+    </div>
+</div>
+</body>
+</html>
