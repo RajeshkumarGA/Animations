@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		.rotateImg{
+			border-radius: 50%;
+
+		}
+		.divStyle{
+			margin: 10%;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		var cursorX;
+		var cursorY;
+		document.onmousemove = function(e){
+		    cursorX = e.pageX;
+		    cursorY = e.pageY;
+		    console.log(cursorX,cursorY);
+		    x =(cursorX/$(window).width())*100;
+		    y =(cursorY/$(window).height())*100;
+
+		    console.log((cursorX/$(window).width())*100);
+		    console.log((cursorY/$(window).height())*100);
+		    if(cursorX>0 && cursorX<130 && cursorY>0 && cursorY<130 )
+		    	document.getElementById('myImage').src='img/1.jpg';
+		    else if (cursorX>130 && cursorX<260 && cursorY>0 && cursorY<130) {
+		    	document.getElementById('myImage').src='img/2.jpg';
+		    }
+		     else if (cursorX>260 && cursorX<$(window).width() && cursorY>0 && cursorY<130) {
+		    	document.getElementById('myImage').src='img/3.jpg';
+		    }
+		     else if (cursorX>260 && cursorX<$(window).width() && cursorY>130 && cursorY<240) {
+		    	document.getElementById('myImage').src='img/4.jpg';
+		    }
+		     else if (cursorX>260 && cursorX<$(window).width() && cursorY>240 && cursorY<$(window).height()) {
+		    	document.getElementById('myImage').src='img/5.jpg';
+		    }
+		     else if (cursorX>130 && cursorX<260 && cursorY>240 && cursorY<$(window).height()) {
+		    	document.getElementById('myImage').src='img/6.jpg';
+		    }
+		     else if (cursorX>0 && cursorX<130 && cursorY>240 && cursorY<$(window).height()) {
+		    	document.getElementById('myImage').src='img/7.jpg';
+		    }
+		     else if (cursorX>0 && cursorX<130  && cursorY>130 && cursorY<240) {
+		    	document.getElementById('myImage').src='img/8.jpg';
+		    }
+		    else
+		    {
+		    	document.getElementById('myImage').src='img/2.jpg';
+		    }
+		}
+	</script>
+
+</head>
+<body>
+	<div class="divStyle">
+		<img id="myImage" src="img/1.jpg" width="100px" height="100px" class="rotateImg">
+	</div>
+
+</body>
+</html>
